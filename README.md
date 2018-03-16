@@ -26,10 +26,12 @@ Three simple interfaces are provided to query the same database; python, web int
 
 
 ![Web](./images/web.png)
+
 **Figure 2:** *Web Interface*
 
 
 ![Bot](./images/bot.png)
+
 **Figure 3:** *Spark Bot Interface*
 
 
