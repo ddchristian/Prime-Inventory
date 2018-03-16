@@ -85,6 +85,14 @@ Files used for Flask html template modules.
 * *device_action_list.html*
 	* Display the results from Prime Infrastructure query that returns an extended list.
 
+## Spark Bot Security
+Security can be restricted via the bot interface by configuring the options in startup.cfg
+
+allowed_domain = *    --> comma seperated domain list
+
+allowed_email = user1@domain1.com1, user2@domain2.com2    -->  specific users not part of allowed_domain 
+
+Default is to allow all domains.
 
 ## Placing Environment Variables in the OS
 In some environments (especially during development) it may be desirable to set some variables outside of the scripting environment.
@@ -104,6 +112,7 @@ set primeServer=198.18.16.1
 set primeAuthToken=aXFlX2FwzSqqf8FGSXNzRVBy
 set sparkBotToken=aXFlX2FwzSqqf8FGSXNzRVBy
 ```
+
 
 
 
