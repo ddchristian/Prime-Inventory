@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prime Infrastructure Search Tool</title>
+
+</head>
+
+<body>
+
+    <form name = "primeVars" action="{{ url_for('search')}}" method="post" >
+
+        <br><br>
+
+        <h1>Prime Infrastructure Quick Search Tool</h1>
+        <h2>Select query type:</h2>
+
+        <input type="radio" name="query" value="serialNumberQ" checked> Serial Number<br>
+        <input type="radio" name="query" value="ipAddrQ"> IP Address<br>
+
+        <input type="radio" name="query" value="macAddrQ"> MAC Address
+            <select name="mac">
+              <option value="client">Client MAC</option>
+              <option value="network" selected>Network MAC</option>
+            </select>
+
+        <br>
+
+        <input type="radio" name="query" value="deviceTypeQ"> Device Type
+          <select name="device">
+          <option value="eq" selected>Equals</option>
+          <option value="startsWith">Starts with</option>
+          <option value="contains">Contains</option>
+          </select>
+        <br>
+
+
+        Search Value:<br>
+        <input type="text" name="searchValue" >
+        <br>
+
+        <br><br>
+
+        <input type="radio" name="query" value="softwareQ"> Software Version
+        <select name="software">
+          <option value="IOS">IOS </option>
+          <option value="IOS-XE" selected>IOS-XE </option>
+          <option value="NX-OS">NX-OS </option>
+            <option value="Cisco Controller">Cisco Controller</option>
+        </select>
+        <br>
+
+
+
+        <input type="submit" value="Submit">
+        <input type="reset">
+
+
+        <br><br>
+
+    </form>
+
+
+
+
+
+<p>Click the "Submit" button to submit the query or "Reset" to set the form to default.</p>
+
+</body>
+</html>

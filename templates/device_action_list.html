@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Prime Infrastructure Search Tool</title>
+
+</head>
+
+
+    <body>
+
+            <h2>Prime Infrastructure Inventory Query</h2>
+
+
+<!-- Write your comments here -->
+
+
+            <div id="content">
+                Summary details for search with {{queryType}}: {{option}} <strong>{{searchValue}}</strong> !
+            </div>
+            <br>
+
+
+    {% if result %}
+
+            {% for record in result %}
+
+            <span>Record number {{loop.index}}: </span>
+
+                <table border = 1>
+                 {% for key, value in record.items() %}
+
+                    <tr>
+                       <th> {{ key }} </th>
+                       <td> {{ value }} </td>
+                    </tr>
+
+                 {% endfor %}
+              </table>
+            <br>
+            {% endfor %}
+
+            <br>
+    {% else %}
+
+            <h2>{{queryType}} {{searchValue}} is not found in your Prime Infrastructure Inventory</h2>
+
+      {% endif %}
+
+    </body>
+</html>
